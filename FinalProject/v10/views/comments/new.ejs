@@ -1,0 +1,21 @@
+<% include ../partials/header%>
+
+<div class="container newpost">
+	<div class="row">
+		<h1>Add New comment to <%= campgrounds.name%></h1>
+		<div class="col-md-6">
+			<div class="widget-area no-padding blank">
+				<div class="status-upload">
+					<form action="/story/<%= campgrounds._id%>/comments" method="post">
+						<div class="form-group">
+							<input type="text" placeholder="Text" name="comment[text]" class="form-control status-upload">
+						</div>
+						<button type="submit" class="btn btn-success green"><i class="glyphicon glyphicon-comment"></i>Comment</button>
+					</form>
+					<a href="/story">Go Back</a>
+				</div><!-- Status Upload  -->
+			</div><!-- Widget Area -->
+		</div>
+	</div>
+</div>
+<% include ../partials/footer%>
